@@ -23,12 +23,13 @@ const HamburgerMenu = () => {
 
   return (
     <div className="relative" ref={menuRef}>
+        
       <button
         className="block md:hidden p-2 rounded focus:outline-none"
         onClick={toggleMenu}
       >
         <svg
-          className="w-6 h-6"
+          className="w-6 h-6 transform rotate-180"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -43,15 +44,36 @@ const HamburgerMenu = () => {
         </svg>
       </button>
 
-      <div className={`absolute left-0 w-full bg-white shadow-md ${isOpen ? 'block' : 'hidden'} md:hidden`} style={{ minHeight: '50vh', minWidth: '100vw' }}>
-        <ul className="flex flex-col p-4">
+
+      <div className={`fixed top-0 left-0 w-full h-full bg-white shadow-md ${isOpen ? 'block' : 'hidden'} md:hidden`}>
+        <button
+          className="absolute top-4 right-4 p-2 rounded focus:outline-none"
+          onClick={toggleMenu}
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <ul className="flex flex-col p-4 h-full justify-center items-center font-bold">
           <li className="py-2"><a href="#home">Home</a></li>
           <li className="py-2"><a href="#about">About</a></li>
           <li className="py-2"><a href="#services">Services</a></li>
           <li className="py-2"><a href="#contact">Contact</a></li>
         </ul>
-      </div>
 
+      </div>
     </div>
   );
 };
