@@ -66,7 +66,7 @@ const HamburgerMenu = () => {
           </svg>
         </button>
 
-        <ul className="flex flex-col p-4 h-full justify-center items-center font-bold">
+        <ul className="pt-28 flex flex-col p-4 h-full justify-start items-center font-bold bg-custom-beige">
           <li className="py-2"><a href="#home">Home</a></li>
           <li className="py-2"><a href="#about">About</a></li>
           <li className="py-2"><a href="#services">Services</a></li>
