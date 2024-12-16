@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react';
 
-import ShopWomenImage from '../../static/images/jennifer-marquez-NYMDlpfum1Q-unsplash.jpg';
-import ShopMenImage from '../../static/images/hunters-race-MYbhN8KaaEc-unsplash.jpg';
-import ShopCouplesImage from '../../static/images/jennifer-marquez-NYMDlpfum1Q-unsplash.jpg';
+import ShopWomenImage from '../../static/images/woman-7107038_1280.jpg';
+import ShopMenImage from '../../static/images/man.jpg';
+import ShopCoupleImage from '../../static/images/couple.jpg';
+
 
 
 const CarouselBase = () => { 
     const [currentIndex, setCurrentIndex] = useState(0); 
-    const images = [ShopWomenImage, ShopMenImage, ShopCouplesImage]; 
+    const images = [ShopWomenImage, ShopMenImage, ShopCoupleImage]; 
 
     useEffect(() => { 
         const interval = setInterval(() => { 
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length); }, 
-        6000); // Change slide every 3 seconds 
+        3000); // Change slide every 3 seconds 
     
         return () => 
             clearInterval(interval); }, [images.length]); 
