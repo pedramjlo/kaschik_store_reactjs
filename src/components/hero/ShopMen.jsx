@@ -1,6 +1,5 @@
 import React from 'react';
 
-import ManModel from '../../static/images/hunters-race-MYbhN8KaaEc-unsplash.jpg'
 
 
 const ShopMenImage = () => {
@@ -8,7 +7,7 @@ const ShopMenImage = () => {
       <div>
 
         <img 
-            src={ManModel} 
+            src='../../static/images/hunters-race-MYbhN8KaaEc-unsplash.jpg' 
             alt="Man model" 
         />
 

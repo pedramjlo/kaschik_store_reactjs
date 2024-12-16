@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Header from './header/Header';
-
+import CarouselBase from './hero/CarouselBase';
 
 
 
@@ -9,6 +9,7 @@ const  Home = () =>  {
     return(
         <div>
             <Header />
+            <CarouselBase />
 
 
         </div>
