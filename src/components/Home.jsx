@@ -7,7 +7,7 @@ import CarouselBase from './hero/CarouselBase';
 
 const  Home = () =>  {
     return(
-        <div>
+        <div className='pb-10'>
             <Header />
             <CarouselBase />
 

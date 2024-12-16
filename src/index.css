@@ -12,7 +12,6 @@ code {
     monospace;
 }
 
-
 .carousel {
   position: relative;
   width: 100%;
@@ -27,9 +26,24 @@ code {
 .carousel-item {
   min-width: 100%;
   box-sizing: border-box;
+  text-align: center; 
 }
 
-.carousel img {
+.carousel-image {
   width: 100%;
   display: block;
+}
+
+.carousel-button {
+  margin-top: 10vw; 
+  padding: 10px 20px;
+  background-color: #FFE8E8;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.carousel-button:hover {
+  background-color: #FFE8E8;
 }
