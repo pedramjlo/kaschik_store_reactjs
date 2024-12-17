@@ -6,10 +6,7 @@ const Catalogue = () => {
     const handleMouseEnter = (index) => { 
         setActiveIndex(index); 
     }; 
-    
-    const handleMouseLeave = () => { 
-        setActiveIndex(null); 
-    };
+
 
     const catalogueOptions = [
         'Hot',
@@ -24,8 +21,7 @@ const Catalogue = () => {
                     <li 
                         key={index} 
                         onMouseEnter={() => handleMouseEnter(index)}
-                        onMouseLeave={handleMouseLeave}
-                        className={activeIndex === index ? 'underline' : ''}
+                        className={activeIndex === index ? 'underline font-semibold -translate-y-1' : ''}
                     >
                         {option}
                     </li>
