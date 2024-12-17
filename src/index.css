@@ -47,3 +47,25 @@ code {
 .carousel-button:hover {
   background-color: #FFE8E8;
 }
+
+
+
+@keyframes gradientChange {
+  0% {
+    background: rgb(255,197,151);
+    background: linear-gradient(90deg, rgba(255,197,151,1) 49%, rgba(247,212,134,1) 92%);
+  }
+  50% {
+    background: rgb(247,212,134);
+    background: linear-gradient(90deg, rgba(247,212,134,1) 49%, rgba(255,197,151,1) 92%);
+  }
+  100% {
+    background: rgb(255,197,151);
+    background: linear-gradient(90deg, rgba(255,197,151,1) 49%, rgba(247,212,134,1) 92%);
+  }
+}
+
+
+.gradiant-text {
+  animation: gradientChange 5s infinite;
+}

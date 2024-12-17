@@ -15,20 +15,22 @@ const CarouselBase = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 7000); // Change slide every 7  seconds
+    }, 6000); // Change slide every 7  seconds
 
     return () => clearInterval(interval);
   }, [images.length]);
 
   return (
-    <div className="carousel">
+    <div className="pb-10 carousel">
       <div className="carousel-inner" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+
         {images.map((image, index) => (
           <div className={`carousel-item ${index === currentIndex ? 'active' : ''}`} key={index}>
             <img src={image.src} alt={image.alt} className="carousel-image" />
             <button className="carousel-button w-10/12 font-semibold shadow-md">{image.buttonText}</button>
           </div>
         ))}
+
       </div>
     </div>
   );
