@@ -7,6 +7,7 @@ module.exports = {
       colors: {
         'custom-gray': '#F7F7F7',
         'custom-beige': '#FFF8DC',
+        'custom-green': '#00693E',
       }
     },
   },

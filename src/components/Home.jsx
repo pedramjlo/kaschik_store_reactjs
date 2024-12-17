@@ -3,7 +3,7 @@ import React from 'react';
 import Header from './header/Header';
 import CarouselBase from './hero/CarouselBase';
 import GradiantText from './hero/GradiantText';
-import Hottests from './hero/Hottests';
+import Catalogue from './hero/Catalogue';
 
 
 const  Home = () =>  {
@@ -12,7 +12,7 @@ const  Home = () =>  {
             <Header />
             <CarouselBase />
             <GradiantText />
-            <Hottests />
+            <Catalogue />
 
 
         </div>

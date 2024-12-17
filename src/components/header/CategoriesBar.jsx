@@ -20,6 +20,7 @@ const CategoriesBar = () =>  {
       </ul>
     </div>
   );
+  
 };
 
 export default CategoriesBar;
