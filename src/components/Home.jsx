@@ -8,7 +8,7 @@ import Catalogue from './hero/Catalogue';
 
 const  Home = () =>  {
     return(
-        <div className='pb-10 flex flex-col'>
+        <div className='pb-10 flex flex-col '>
             <Header />
             <CarouselBase />
             <GradiantText />
