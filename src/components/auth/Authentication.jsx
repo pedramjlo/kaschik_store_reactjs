@@ -21,10 +21,25 @@ const Authentication = () => {
             const response = await axios.post('http://127.0.0.1:8000/api/auth/login/', { email, password });
             localStorage.setItem('access_token', response.data.access);
             localStorage.setItem('refresh_token', response.data.refresh);
+            window.location.href = '/';
         } catch (err) {
-            setError('Invalid credentials');
+            if (err.response) {
+                // Server responded with a status other than 200 range
+                console.error(err.response.data); // Log the error response
+                setError(err.response.data.error || 'Invalid credentials');
+            } else if (err.request) {
+                // Request was made but no response received
+                console.error(err.request); // Log the request
+                setError('No response from server');
+            } else {
+                // Something else happened while setting up the request
+                console.error('Error', err.message); // Log the error message
+                setError('An error occurred');
+            }
         }
     };
+    
+    
 
     const handleRegistration = async (e) => {
         e.preventDefault();
@@ -32,8 +47,10 @@ const Authentication = () => {
             const response = await axios.post('http://127.0.0.1:8000/api/auth/register/', { email, password, firstName, lastName, nationality, nationalIDNumber, passportNumber });
             localStorage.setItem('access_token', response.data.access);
             localStorage.setItem('refresh_token', response.data.refresh);
+            window.location.href = '/';
         } catch (err) {
-            setError('Invalid credentials');
+            console.error(err.response.data); // Log the error response
+            setError(err.response.data.error || 'Invalid credentials');
         }
     };
 
@@ -67,11 +84,8 @@ const Authentication = () => {
                         <button type="submit" className="p-2 auth-form-fields bg-black text-white auth-form-buttons">Login</button>
                     </form>
                     {error && <p className="text-red-500">{error}</p>}
-                    <a href="#" className='pl-5 text-sm font-medium text-left'>forgot your password?</a>
+                    <a href="#" className='pl-5 text-sm font-medium text-left text-blue-900'>forgot your password?</a>
                 </div>
-
-
-
 
                 <div className='flex flex-col gap-5 '>
 
@@ -156,8 +170,6 @@ const Authentication = () => {
                     </form>
                     {error && <p className="text-red-500">{error}</p>}
                 </div>
-
-
             </div>    
         </div>
     );
