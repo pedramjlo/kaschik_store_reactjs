@@ -69,3 +69,17 @@ code {
 .gradiant-text {
   animation: gradientChange 5s infinite;
 }
+
+
+
+.auth-form-fields {
+  width: 90.666667%;
+  height: 9vh;
+}
+
+
+.auth-form-buttons {
+  margin-top: 2vh;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
